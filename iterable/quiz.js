@@ -55,3 +55,21 @@ const single = makeIterable(0, 10, (n) => n)
 for (const num of single) {
   console.log(num)
 }
+
+
+// Quiz 2
+
+const prop = {
+  name: 'Button',
+  styles: {
+    size: 20,
+    color: 'black',
+  },
+};
+
+function changeColor({name, styles: {size, color}}) {
+  console.log(name);
+  console.log(color)
+}
+
+changeColor(prop);
