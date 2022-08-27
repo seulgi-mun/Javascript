@@ -4,7 +4,9 @@
 // output: [ '🍌', '🥝', '🍇', '🥝' ]
 
 
-
+function change() {
+  consloe.log()
+}
 
 
 
