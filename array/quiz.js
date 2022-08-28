@@ -4,8 +4,12 @@
 // output: [ '🍌', '🥝', '🍇', '🥝' ]
 
 
-function change() {
-  consloe.log()
+const arr = ['🍌', '🍓', '🍇', '🍓']
+function change(ls) {
+  for (let i = 0; i < ls.length; i++) {
+   consloe.log(i)
+}
+ 
 }
 
 
