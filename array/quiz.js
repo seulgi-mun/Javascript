@@ -7,11 +7,12 @@
 const arr = ['🍌', '🍓', '🍇', '🍓']
 function change(ls) {
   for (let i = 0; i < ls.length; i++) {
-   consloe.log(i)
+   if (ls[i] === '🍓') {
+      ls[i] = '🥝'
+      }
+    }
 }
- 
-}
-
+consloe.log(change(arr))
 
 
 
