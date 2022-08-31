@@ -7,12 +7,15 @@
 const arr = ['🍌', '🍓', '🍇', '🍓']
 function change(ls) {
   for (let i = 0; i < ls.length; i++) {
-   if (ls[i] === '🍓') {
-      ls[i] = '🥝'
+    if (ls[i] === '🍓') {
+        ls[i] = '🥝'
       }
     }
+    return ls
 }
-consloe.log(change(arr))
+
+const result = change(arr)
+console.log(result)
 
 
 
@@ -26,6 +29,19 @@ consloe.log(change(arr))
 const arr2 = [ '🍌', '🥝', '🍇', '🥝' ]
 
 
+
+function counter(ls) {
+  let count = 0
+  for (let i = 0; i < ls.length; i++) {
+    if (ls[i] === '🥝') {
+      count += 1
+    }
+  }
+  return count
+}
+
+const answer = counter(arr2)
+console.log(answer)
 
 // 퀴즈3: 배열1, 배열2 두개의 배열을 전달받아,
 // 배열1 아이템중 배열2에 존재하는 아이템만 담고 있는 배열 반환
