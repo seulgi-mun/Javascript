@@ -11,11 +11,26 @@ function change(ls) {
         ls[i] = '🥝'
       }
     }
-    return ls
+  return ls
 }
 
 const result = change(arr)
 console.log(result)
+
+
+// 답
+function replace(array, from, to) {
+  const replaced = Array.from(array);
+  for (let i = 0; i < replaced.length; i++) {
+    if (replaced[i] === from) {
+        replaced[i] = to;
+      }
+    }
+  return replaced
+}
+
+const result1 = replace(arr, '🍓', '🥝');
+console.log(result1);
 
 
 
@@ -42,6 +57,20 @@ const answer = counter(arr2)
 console.log(answer)
 
 
+// 답
+function count(arr, item) {
+  let cnt = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === '🥝') {
+      cnt += 1
+    }
+  }
+  return cnt
+}
+
+console.log(count([ '🍌', '🥝', '🍇', '🥝' ], '🥝'))
+
+
 
 // 퀴즈3: 배열1, 배열2 두개의 배열을 전달받아,
 // 배열1 아이템중 배열2에 존재하는 아이템만 담고 있는 배열 반환
@@ -51,6 +80,32 @@ console.log(answer)
 const arr3 = ['🍌', '🥝', '🍇']
 const arr4 = ['🍌', '🍓', '🍇', '🍓']
 
+function same(ls1, ls2) {
+  const answer = [];
+  for (let i = 0; i < ls1.length; i++) {
+    if (ls2.includes(ls1[i])) {
+      answer.push(ls1[i])
+    }
+  }
+  return answer
+}
+
+console.log(same(arr3, arr4));
+
+
+
+// 답
+function match(input, search) {
+  const result = [];
+  for (let i = 0; i < input.length; i++) {
+    if (search.includes(input[i])) {
+      result.push(input[i])
+    }
+  }
+  return result
+}
+
+console.log(match(['🍌', '🥝', '🍇'],  ['🍌', '🍓', '🍇', '🍓']));
 
 
 
